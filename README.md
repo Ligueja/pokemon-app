@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+## <b>PROGRAMA STARTER FULL STACK WEB - GROWDEV</b>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<b>Módulo: REACT III</b>
 
-Currently, two official plugins are available:
+<b>ATIVIDADE FINAL DO MÓDULO - POKÉMON</b>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# CONSUMO DA API POKÉMON
 
-## Expanding the ESLint configuration
+Este é um projeto de uma aplicação web front-end para consumir a API do Pokémon, com listagem dos personagens, detalhes e uma lista Pokedex.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React**
+- **Vite**
+- **Axios**
+- **Redux Toolkit**
+- **Redux Persist**
+- **Material UI (MUI)**
+- **TypeScript**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Funcionalidades
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 1. Listagem dos Personagens
+- A página inicial exibe uma lista de personagens Pokémon, obtida da PokeAPI.
+- A listagem inclui a imagem, nome e ID de cada Pokémon.
+- A navegação entre páginas é facilitada pela funcionalidade de paginação, permitindo que o usuário veja uma quantidade limitada de Pokémon por página.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+<img src="https://github.com/Ligueja/pokemon-app/blob/main/src/assets/list.jpg" width="600" height="700"/> 
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 2. Detalhes dos Personagens
+- Ao clicar em um Pokémon na listagem, o usuário é redirecionado para a página de detalhes.
+- A página de detalhes exibe informações mais detalhadas sobre o Pokémon selecionado, incluindo suas habilidades, tipos e estatísticas.
+- Há um botão para retornar à página de listagem, proporcionando uma navegação simples e intuitiva.
+
+<img src="https://github.com/Ligueja/pokemon-app/blob/main/src/assets/details.jpg" width="400" height="400"/> 
+
+### 3. Pokedex (Favoritos)
+- O usuário pode adicionar seus Pokémon favoritos à Pokedex diretamente da listagem principal.
+- A Pokedex é acessível através de um ícone na barra de navegação e exibe apenas os Pokémon marcados como favoritos.
+- Na Pokedex, o usuário verá o nome e a imagem dos seus Pokémon favoritos, facilitando a visualização e gerenciamento dos seus preferidos.
+
+<img src="https://github.com/Ligueja/pokemon-app/blob/main/src/assets/pokedex.jpg" width="400" height="400"/> 
+
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+
+   ```bash
+   https://github.com/Ligueja/pokemon-app.git
+   cd pokemon-app
+
+   ```
+
+2. Instale das dependências:
+
+   ```bash
+   npm install
+
+   ```
+
+3. Inicie o servidor:
+   ```bash
+   npm run dev
+   ```
